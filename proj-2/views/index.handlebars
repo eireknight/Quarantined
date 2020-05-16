@@ -3,15 +3,20 @@
     <div class="row">
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
+        <h2>Quarantined</h2>
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
-            <label for="example-text">Example Text</label>
+            <label for="text">Do you think you have the best meal?</label>
             <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
           </div>
           <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+            <label for="description">
+              <ul>
+                <li>With Quarantined, users can create an account that saves your favorite meals and posts them to our database for others to see!</li>
+                <li>Read, comment and vote on other peoples favorite meals!</li>
+                <li>The top voted meals will be posted on the front-page for all to see!</li>
+              </ul></label>
+            <textarea class="form-control" id="description" aria-describedby="description" placeholder="Enter Description"></textarea>
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
