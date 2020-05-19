@@ -1,3 +1,4 @@
+
 DROP DATABASE IF EXISTS forum;
 
 CREATE DATABASE forum;
@@ -39,3 +40,10 @@ CREATE TABLE comments (
   createdAt DATETIME NOT NULL,
   updatedAt DATETIME NOT NULL
 );
+
+DROP DATABASE IF EXISTS food_db;
+CREATE DATABASE food_db;
+
+DROP DATABASE IF EXISTS drinks_db;
+CREATE DATABASE drinks_db;
+
