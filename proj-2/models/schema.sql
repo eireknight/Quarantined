@@ -1,5 +1,49 @@
+
+DROP DATABASE IF EXISTS forum;
+
+CREATE DATABASE forum;
+
+USE forum;
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL,
+  password VARCHAR(60) NOT NULL,
+  createdAt DATETIME NOT NULL,
+  updatedAt DATETIME NOT NULL
+);
+
+CREATE TABLE posts (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(300) DEFAULT NULL,
+  url VARCHAR(2000) DEFAULT NULL,
+  userId INT,
+  createdAt DATETIME NOT NULL,
+  updatedAt DATETIME NOT NULL
+);
+
+CREATE TABLE votes (
+  userId INT,
+  postId INT,
+  voteDirection TINYINT,
+  createdAt DATETIME NOT NULL,
+  updatedAt DATETIME NOT NULL,
+  PRIMARY KEY userId
+);
+
+
+CREATE TABLE comments (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  userId INT,
+  postId INT,
+  text VARCHAR(10000),
+  createdAt DATETIME NOT NULL,
+  updatedAt DATETIME NOT NULL
+);
+
 DROP DATABASE IF EXISTS food_db;
 CREATE DATABASE food_db;
 
 DROP DATABASE IF EXISTS drinks_db;
 CREATE DATABASE drinks_db;
+
