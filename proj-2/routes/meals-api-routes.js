@@ -28,7 +28,7 @@ axios.get('https://www.themealdb.com/api/json/v2/9973533/latest.php')
 
         ingredients.push(response.data.meals[i].strIngredient1)
         }
-    }
+    } 
     console.log(names)
     console.log(images)
     console.log(ingredients)
