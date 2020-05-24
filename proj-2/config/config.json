@@ -8,8 +8,8 @@
   },
   "test": {
     "username": "root",
-    "password": "Bmxrider1",
-    "database": "ingredientsDb",
+    "password": null,
+    "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
