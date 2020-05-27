@@ -14,7 +14,16 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     db.Drinks.findAll({}).then(function(dbDrinks) {
       res.render("index", {
-        msg: "Welcome!",
+        msg: "",
+        drinks: dbDrinks
+      });
+    });
+  });
+
+  app.get("/home", function(req, res) {
+    db.Drinks.findAll({}).then(function(dbDrinks) {
+      res.render("index", {
+        msg: "",
         drinks: dbDrinks
       });
     });
@@ -23,7 +32,7 @@ module.exports = function(app) {
   app.get("/register", function(req, res) {
     db.Drinks.findAll({}).then(function(dbDrinks) {
       res.render("signup", {
-        msg: "Welcome!",
+        msg: "",
         drinks: dbDrinks
       });
     });
@@ -32,7 +41,7 @@ module.exports = function(app) {
   app.get("/login", function(req, res) {
     db.Drinks.findAll({}).then(function(dbDrinks) {
       res.render("login", {
-        msg: "Welcome!",
+        msg: "",
         drinks: dbDrinks
       });
     });
@@ -41,7 +50,7 @@ module.exports = function(app) {
   app.get("/profile", function(req, res) {
     db.Drinks.findAll({}).then(function(dbDrinks) {
       res.render("profile", {
-        msg: "Welcome!",
+        msg: "",
         drinks: dbDrinks
       });
     });
@@ -50,7 +59,7 @@ module.exports = function(app) {
   app.get("/submissions", function(req, res) {
     db.Drinks.findAll({}).then(function(dbDrinks) {
       res.render("submissions", {
-        msg: "Welcome!",
+        msg: "",
         drinks: dbDrinks
       });
     });
