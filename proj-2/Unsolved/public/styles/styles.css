@@ -162,7 +162,7 @@
 /*About container*/
 
 .about-container {
-  background-color: rgb(214, 214, 214);
+  background-color: rgb(255, 255, 255);
 }
 
 .about-box {
@@ -197,7 +197,8 @@
 /*Frontpage submissions*/
 
 .jumbotron {
-  background-color: rgb(255, 254, 254);
+  background-image: url("../images/background1.jpg");
+  background-size: 100%;
 }
 .container-sub {
   background-image: url("../images/background1.jpg");
