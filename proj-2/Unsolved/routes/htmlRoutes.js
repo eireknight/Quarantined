@@ -29,6 +29,33 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/login", function(req, res) {
+    db.Drinks.findAll({}).then(function(dbDrinks) {
+      res.render("login", {
+        msg: "Welcome!",
+        drinks: dbDrinks
+      });
+    });
+  });
+
+  app.get("/profile", function(req, res) {
+    db.Drinks.findAll({}).then(function(dbDrinks) {
+      res.render("profile", {
+        msg: "Welcome!",
+        drinks: dbDrinks
+      });
+    });
+  });
+
+  app.get("/submissions", function(req, res) {
+    db.Drinks.findAll({}).then(function(dbDrinks) {
+      res.render("submissions", {
+        msg: "Welcome!",
+        drinks: dbDrinks
+      });
+    });
+  });
+
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
