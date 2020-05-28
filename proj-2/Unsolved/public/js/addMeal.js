@@ -33,7 +33,7 @@ $(document).ready(function() {
   var $mealIngredients = $("#mealIngredients");
   var $mealMeasurements = $("#mealMeasurements");
   var $mealImage = $("#mealImage");
-  $("#submit").on("click", function(event) {
+  $("#submitMeal").on("click", function(event) {
     event.preventDefault();
     var addMeal = {
       Name: $mealName.val().trim(),

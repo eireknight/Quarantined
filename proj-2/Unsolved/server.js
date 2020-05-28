@@ -11,6 +11,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 
+var DrinkAPIKey = process.env.DRINK_API_KEY;
+var MealAPIKey = process.env.MEAL_API_KEY;
 // Handlebars
 app.engine(
   "handlebars",
@@ -47,3 +49,5 @@ db.sequelize.sync(syncOptions).then(function() {
 });
 
 module.exports = app;
+module.exports = DrinkAPIKey;
+module.exports = MealAPIKey;

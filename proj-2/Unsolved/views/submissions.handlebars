@@ -21,168 +21,186 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-lg-12">
-                                <h1 id="top-food-header">Other food submissions <i id="food"
-                                        class="fas fa-pizza-slice"></i></h1>
+                                <h1 id="top-food-header">Other food submissions <i id="food" class="fas fa-pizza-slice"></i></h1>
+                                <div class="container">
+                                    <div class="card mt-4">
+                                        <div class="card-body">
+                                        <h2 class="card-title">What is your New meal</h2>
+                                        <p>
+                                            <h3><strong>What is the meal called?</strong></h3>
+                                            <input id="mealName"></input>
+                                        <p>
+                                        <p>
+                                            <h3><strong>Select the category</strong></h3>
+                                            <select class="chosen-select" id="mealCategory">
+                                            <option value=""></option>
+                                            <option value="Beef">Beef</option>
+                                            <option value="Breakfast">Breakfast</option>
+                                            <option value="Chicken">Chicken</option>
+                                            <option value="Dessert">Dessert</option>
+                                            <option value="Goat">Goat</option>
+                                            <option value="Lamb">Lamb</option>
+                                            <option value="Miscellaneous">Miscellaneous</option>
+                                            <option value="Pasta">Pasta</option>
+                                            <option value="Pork">Pork</option>
+                                            <option value="Seafood">Seafood</option>
+                                            <option value="Side">Side</option>
+                                            <option value="Starter">Starter</option>
+                                            <option value="Vegan">Vegan</option>
+                                            <option value="Vegetarian">Vegetarian</option>
+                                            </select>
+                                        <p>
+                                        <p>
+                                            <h3><strong>what is your food type?</strong></h3>
+                                            <select class="chosen-select" id="mealArea">
+                                            <option value=""></option>
+                                            <option value="American">American</option>
+                                            <option value="British">British</option>
+                                            <option value="Canadian">Canadian</option>
+                                            <option value="Chinese">Chinese</option>
+                                            <option value="Dutch">Dutch</option>
+                                            <option value="Egyptian">Egyptian</option>
+                                            <option value="French">French</option>
+                                            <option value="Greek">Greek</option>
+                                            <option value="Indian">Indian</option>
+                                            <option value="Irish">Irish</option>
+                                            <option value="Italian">Italian</option>
+                                            <option value="Jamaican">Jamaican</option>
+                                            <option value="Japanese">Japanese</option>
+                                            <option value="Kenyan">Kenyan</option>
+                                            <option value="Malaysian">Malaysian</option>
+                                            <option value="Mexican">Mexican</option>
+                                            <option value="Moroccan">Moroccan</option>
+                                            <option value="Russian">Russian</option>
+                                            <option value="Spanish">Spanish</option>
+                                            <option value="Thai">Thai</option>
+                                            <option value="Tunisian">Tunisian</option>
+                                            <option value="Turkish">Turkish</option>
+                                            <option value="Unknown">Unknown</option>
+                                            <option value="Vietnamese">Vietnamese</option>
+                                            </select>
+                                        <p>
+                                        <p>
+                                            <h3><strong>How do you make the meal?</strong></h3>
+                                            <input id="mealInstructions"></input>
+                                        <p>
+                                        <p>
+                                            <h3><strong>Ingredients</strong></h3>
+                                            <input id="mealIngredients"></input>
+                                        <p>
+                                        <p>
+                                            <h3><strong>Measurements</strong></h3>
+                                            <input id="mealMeasurements"></input>
+                                        <p>
+                                        <p>
+                                            <h3><strong>please provide and image url for you new meal</strong></h3>
+                                            <input id="mealImage"></input>
+                                        </p> 
+
+                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="submitMeal">Submit</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
                             </div>
+                            
                         </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <a id="image-link1" target="_blank" href="">
-                                    <img class="food-thumbnail" id="food-thumbnail1">
-                                </a>
-                            </div>
-                            <div class="col-lg-4">
-                                <a id="food-name-link1" target="_blank" href="">
-                                    <h1>
-                                        <span class="food-name" id="food-name1"></span>
-                                    </h1>
-                                </a>
-                                <hr>
-                                <p>
-                                    Description: <span class="food-title" id="food-title1"></span>
-                                    <br>
-                                    <span class="food-desc" id="food-desc1"></span>
-                                </p>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <a id="image-link2" target="_blank" href="">
-                                    <img class="food-thumbnail" id="food-thumbnail2">
-                                </a>
-                            </div>
-                            <div class="col-lg-4">
-                                <a id="food-name-link2" target="_blank" href="">
-                                    <h1>
-                                        <span class="food-name" id="food-name2"></span>
-                                    </h1>
-                                </a>
-                                <hr>
-                                <p>
-                                    Description: <span class="food-title" id="food-title2"></span>
-                                    <br>
-                                    <span class="food-desc" id="food-desc2"></span>
-                                </p>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <a id="image-link3" target="_blank" href="">
-                                    <img class="food-thumbnail" id="food-thumbnail3">
-                                </a>
-                            </div>
-                            <div class="col-lg-4">
-                                <a id="food-name-link3" target="_blank" href="">
-                                    <h1>
-                                        <span class="food-name" id="food-name3"></span>
-                                    </h1>
-                                </a>
-                                <hr>
-                                <p>
-                                    Description: <span class="stream-title" id="stream-title3"></span>
-                                    <br>
-                                    <span class="food-desc" id="food-desc3"></span>
-                                </p>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
-            </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="panel-heading">
+                        <h1 id="top-food-header">New Meals <i class="fas fa-pizza-slice"></i></h1>
+                            <div class="row" id="food-list">
+                            </div>
+                    </div>
+                </div>
+            </div>                                 
         </div>
-
 <br>
 <br>
+<div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-lg-12">
-                                <h1 id="top-streams-header">Other drink submissions <i id="food"
-                                        class="fas fa-glass-martini"></i></h1>
+                                <h1 id="top-drink-header">Other drink submissions <i id="drink" class="fas fa-glass-martini"></i></h1>
+                                    <div class="container">
+                                    <div class="card mt-4">
+                                        <div class="card-body">
+                                        <h2 class="card-title">What is your New drink</h2>
+                                        <p>
+                                            <h3><strong>What is the drink called?</strong></h3>
+                                            <input id="drinkName"></input>
+                                        <p>
+                                        <p>
+                                            <h3><strong>Select the category</strong></h3>
+                                            <select class="chosen-select" id="drinkCategory">
+                                            <option value=""></option>
+                                            <option value="Ordinary Drink">Ordinary Drink</option>
+                                            <option value="Cocktail">Cocktail</option>
+                                            <option value="Milk / Float / Shake">Milk/Float/Shake</option>
+                                            <option value="Cocoa">Cocoa</option>
+                                            <option value="Shot">Shot</option>
+                                            <option value="Coffee / Tea">Coffee/Tea</option>
+                                            <option value="Homemade Liqueur">HomemadeLiqueur</option>
+                                            <option value="Punch / Party Drink">Punch/PartyDrink</option>
+                                            <option value="Beer">Beer</option>
+                                            <option value="Soft Drink / Soda">SoftDrink/Soda</option>
+                                            <option value="Other/Unknown">Other/Unknown</option>
+                                            </select>
+                                        <p>
+                                        <p>
+                                            <h3><strong>Is your drink alcoholic?</strong></h3>
+                                            <select class="chosen-select" id="drinkAlcoholic">
+                                            <option value=""></option>
+                                            <option value="Alcoholic">Alcoholic</option>
+                                            <option value="Non alcoholic">Non alcoholic</option>
+                                            <option value="Optional alcohol">Optional alcohol</option>
+                                            </select>
+                                        <p>
+                                        <p>
+                                            <h3><strong>How do you make the drink?</strong></h3>
+                                            <input id="drinkInstructions"></input>
+                                        <p>
+                                        <p>
+                                            <h3><strong>Ingredients</strong></h3>
+                                            <input id="drinkIngredients"></input>
+                                        <p>
+                                        <p>
+                                            <h3><strong>Measurements</strong></h3>
+                                            <input id="drinkMeasurements"></input>
+                                        <p>
+                                        <p>
+                                            <h3><strong>please provide and image url for you new drink</strong></h3>
+                                            <input id="drinkImage"></input>
+                                        </p> 
+                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="submitDrink">Submit</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <a id="image-link1" target="_blank" href="">
-                                    <img class="drink-thumbnail" id="drink-thumbnail1">
-                                </a>
-                            </div>
-                            <div class="col-lg-4">
-                                <a id="drink-name-link1" target="_blank" href="">
-                                    <h1>
-                                        <span class="drink-name" id="drink-name1"></span>
-                                    </h1>
-                                </a>
-                                <hr>
-                                <p>
-                                    Description: <span class="drink-title" id="drink-title1"></span>
-                                    <br>
-                                    <span class="drink-desc" id="drink-desc1"></span>
-                                </p>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <a id="image-link2" target="_blank" href="">
-                                    <img class="drink-thumbnail" id="drink-thumbnail2">
-                                </a>
-                            </div>
-                            <div class="col-lg-4">
-                                <a id="drink-name-link2" target="_blank" href="">
-                                    <h1>
-                                        <span class="drink-name" id="drink-name2"></span>
-                                    </h1>
-                                </a>
-                                <hr>
-                                <p>
-                                    Description: <span class="drink-title" id="drink-title2"></span>
-                                    <br>
-                                    <span class="drink-desc" id="drink-desc2"></span>
-                                </p>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <a id="image-link3" target="_blank" href="">
-                                    <img class="drink-thumbnail" id="drink-thumbnail3">
-                                </a>
-                            </div>
-                            <div class="col-lg-4">
-                                <a id="drink-name-link3" target="_blank" href="">
-                                    <h1>
-                                        <span class="drink-name" id="drink-name3"></span>
-                                    </h1>
-                                </a>
-                                <hr>
-                                <p>
-                                    Description: <span class="drink-title" id="drink-title3"></span>
-                                    <br>
-                                    <span class="drink-desc" id="drink-desc3"></span>
-                                </p>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="panel-heading">
+                            <h1>New Drinks <i class="fas fa-glass-martini"></i></h1>
+                                <div class="row" id="drink-list">
+                                </div>
+                        </div>
+                    </div>
+                </div>  
             </div>
+        </div>
     </div>
-
+</div>
+      
     <br>
     <br>
 
-
-                    {{>footer}}
+{{>footer}}
+<script type="text/javascript" src="/js/addMeal.js"></script>
+<script type="text/javascript" src="/js/addDrink.js"></script>
