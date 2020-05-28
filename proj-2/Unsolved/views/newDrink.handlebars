@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title">What is your New drink</h2>
+
+          <p>
+            <h3><strong>What is the drink called?</strong></h3>
+            <input id="drinkName"></input>
+          <p>
+          <p>
+            <h3><strong>Select the category</strong></h3>
+            <select class="chosen-select" id="drinkCategory">
+              <option value=""></option>
+              <option value="Ordinary Drink">Ordinary Drink</option>
+              <option value="Cocktail">Cocktail</option>
+              <option value="Milk / Float / Shake">Milk/Float/Shake</option>
+              <option value="Cocoa">Cocoa</option>
+              <option value="Shot">Shot</option>
+              <option value="Coffee / Tea">Coffee/Tea</option>
+              <option value="Homemade Liqueur">HomemadeLiqueur</option>
+              <option value="Punch / Party Drink">Punch/PartyDrink</option>
+              <option value="Beer">Beer</option>
+              <option value="Soft Drink / Soda">SoftDrink/Soda</option>
+              <option value="Other/Unknown">Other/Unknown</option>
+            </select>
+          <p>
+          <p>
+            <h3><strong>Is your drink alcoholic?</strong></h3>
+            <select class="chosen-select" id="drinkAlcoholic">
+              <option value=""></option>
+              <option value="Alcoholic">Alcoholic</option>
+              <option value="Non alcoholic">Non alcoholic</option>
+              <option value="Optional alcohol">Optional alcohol</option>
+            </select>
+          <p>
+          <p>
+            <h3><strong>How do you make the drink?</strong></h3>
+            <input id="drinkInstructions"></input>
+          <p>
+          <p>
+            <h3><strong>Ingredients</strong></h3>
+            <input id="drinkIngredients"></input>
+          <p>
+          <p>
+            <h3><strong>Measurements</strong></h3>
+            <input id="drinkMeasurements"></input>
+          <p>
+          <p>
+            <h3><strong>please provide and image url for you new drink</strong></h3>
+            <input id="drinkImage"></input>
+          </p> 
+
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="submit">Submit</button>
+
+        <div class="panel-heading">
+                <h1>New Drinks <i class="fas fa-glass-martini"></i></h1>
+                <div class="row" id="drink-list">
+                </div>
+            </div
+            <a href="/">← Back To Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/addDrink.js"></script>

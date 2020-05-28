@@ -7,13 +7,20 @@ module.exports = function (app) {
       res.json(dbDrinks);
     });
   });
-  app.get("/api/drinks", function (req, res) {
-    db.drinks.findOne({}).then(function (dbDrinks) {
+  app.get("/api/drinks/:Name", function (req, res) {
+    db.drinks.findOne({
+      where: {
+        Name: req.params.Name
+      }
+    }).then(function (dbDrinks) {
       res.json(dbDrinks);
     });
   });
-// function postDrink() {
-
+  app.post("/api/addDrink", function(req, res) {
+    db.drinks.create(req.body).then(function(dbDrinks) {
+      res.json(dbDrinks);
+    });
+  });
 
 var newDrink = {
     names: [],
@@ -24,16 +31,17 @@ var newDrink = {
     measurements: [],
     images: []
   }
+  
   // get the latest drinks
-  function latestDrinks() {
+  function allDrinks() {
     axios.get("https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=")
      .then(response => {
-         for(i = 0; i < 1000; i ++) {
+         for(i = 0; i < 595; i ++) {
             newDrink.names.push(response.data.drinks[i].strDrink)
             newDrink.categories.push(response.data.drinks[i].strCategory)
             newDrink.alcoholic.push(response.data.drinks[i].strAlcoholic)
             newDrink.instructions.push(response.data.drinks[i].strInstructions)
-            newDrink.images.push(response.data.drinks[i].strDrinkThumb)
+            newDrink.images.push(response.data.drinks[i].strDrinkThumb).toString();
             function makeArray(obj){
                 var result = Object.keys(obj).map(function (key) { 
                     return [key, obj[key]]; 
@@ -57,7 +65,7 @@ var newDrink = {
             }
             var newIngred = newDrink.ingredients.toString()
             var newMeasure = newDrink.measurements.toString()
-            console.log("post hit");
+            var newImage = newDrink.images.toString()
             db.drinks.create({
               Name: newDrink.names[0],
               Category:  newDrink.categories[0],
@@ -65,10 +73,9 @@ var newDrink = {
               Instructions:  newDrink.instructions[0],
               Ingredients:  newIngred,
               Measurements:  newMeasure,
-              Images:  newDrink.images[0]
+              Image:  newImage
             }).then(function () {
         });
-            // postDrink()
             clearDrinks();
             function clearDrinks(){
                 newDrink.names = [];
@@ -85,7 +92,5 @@ var newDrink = {
      console.log(error);
      })
   }
-  latestDrinks();
-
-
+  allDrinks();
 };
