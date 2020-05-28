@@ -21,10 +21,6 @@
   color: rgb(253, 253, 253);
 }
 
-.home-content .text p {
-  margin-top: 25px;
-  color: rgb(253, 253, 253);
-}
 .home-content .description {
   margin: 30px 0 10px 0;
 }
@@ -118,12 +114,10 @@
           transform:translateY(1px);
 }
 
-
-
 /*Navbar*/
 
 .navbar {
-  background: rgb(245, 245, 245);
+  background: cornsilk;
   -o-transition: all .6s;
   -moz-transition: all .6s;
   -webkit-transition: all .6s;
@@ -200,41 +194,21 @@
   padding: 0 0 10px 0;
 }
 
-.cms {
-  width: 50%;
-}
-
 /*Frontpage submissions*/
 
 .jumbotron {
-  background-color: rgb(238, 237, 237);
+  background-image: url("../images/background1.jpg");
+  background-size: 100%;
 }
 .container-sub {
-  background-image: url("../images/login.jpg");
-  background-size: 90%;
+  background-image: url("../images/background1.jpg");
 }
 
-/*sign-up*/
-
-.form-container1 {
-  background-color:
-}
-#userinput {
-  width: 40%;
-  margin: auto;
-}
-
-.userinput form .btn-primary {
-  background-color: black;
-}
 /*profile*/
 
 .container-fluid {
-  background-image: url("../images/img1.jpg");
+  background-color: grey;
 }
-
-/*register*/
-
 
 /*submissions*/
 
@@ -261,10 +235,6 @@
 .banner-area2 h1 {
   color: rgb(255, 255, 255)
 }
- .container1 {
-   background-image: url("../images/img1.jpg");
-   background-size: 60%;
- }
 
 /*footer*/
 
