@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title">What is your New meal</h2>
+
+          <p>
+            <h3><strong>What is the meal called?</strong></h3>
+            <input id="mealName"></input>
+          <p>
+          <p>
+            <h3><strong>Select the category</strong></h3>
+            <select class="chosen-select" id="mealCategory">
+              <option value=""></option>
+              <option value="Beef">Beef</option>
+              <option value="Breakfast">Breakfast</option>
+              <option value="Chicken">Chicken</option>
+              <option value="Dessert">Dessert</option>
+              <option value="Goat">Goat</option>
+              <option value="Lamb">Lamb</option>
+              <option value="Miscellaneous">Miscellaneous</option>
+              <option value="Pasta">Pasta</option>
+              <option value="Pork">Pork</option>
+              <option value="Seafood">Seafood</option>
+              <option value="Side">Side</option>
+              <option value="Starter">Starter</option>
+              <option value="Vegan">Vegan</option>
+              <option value="Vegetarian">Vegetarian</option>
+            </select>
+          <p>
+          <p>
+            <h3><strong>what is your food type?</strong></h3>
+            <select class="chosen-select" id="mealArea">
+              <option value=""></option>
+              <option value="American">American</option>
+              <option value="British">British</option>
+              <option value="Canadian">Canadian</option>
+              <option value="Chinese">Chinese</option>
+              <option value="Dutch">Dutch</option>
+              <option value="Egyptian">Egyptian</option>
+              <option value="French">French</option>
+              <option value="Greek">Greek</option>
+              <option value="Indian">Indian</option>
+              <option value="Irish">Irish</option>
+              <option value="Italian">Italian</option>
+              <option value="Jamaican">Jamaican</option>
+              <option value="Japanese">Japanese</option>
+              <option value="Kenyan">Kenyan</option>
+              <option value="Malaysian">Malaysian</option>
+              <option value="Mexican">Mexican</option>
+              <option value="Moroccan">Moroccan</option>
+              <option value="Russian">Russian</option>
+              <option value="Spanish">Spanish</option>
+              <option value="Thai">Thai</option>
+              <option value="Tunisian">Tunisian</option>
+              <option value="Turkish">Turkish</option>
+              <option value="Unknown">Unknown</option>
+              <option value="Vietnamese">Vietnamese</option>
+            </select>
+          <p>
+          <p>
+            <h3><strong>How do you make the meal?</strong></h3>
+            <input id="mealInstructions"></input>
+          <p>
+          <p>
+            <h3><strong>Ingredients</strong></h3>
+            <input id="mealIngredients"></input>
+          <p>
+          <p>
+            <h3><strong>Measurements</strong></h3>
+            <input id="mealMeasurements"></input>
+          <p>
+          <p>
+            <h3><strong>please provide and image url for you new meal</strong></h3>
+            <input id="mealImage"></input>
+          </p> 
+
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="submit">Submit</button>
+
+        <div class="panel-heading">
+                <h1 id="top-food-header">New Meals <i class="fas fa-pizza-slice"></i></h1>
+                    <div class="row" id="food-list">
+                </div>
+            </div
+            <a href="/">← Back To Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/addMeal.js"></script>

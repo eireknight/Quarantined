@@ -2,38 +2,45 @@ var db = require("../models");
 var axios = require("axios");
 
 module.exports = function (app) {
-  app.get("/api/meals", function (req, res) {
+  app.get("/api/Meals", function (req, res) {
     db.meals.findAll({}).then(function (dbMeals) {
       res.json(dbMeals);
     });
   });
-  app.get("/api/meals", function (req, res) {
-    db.meals.findOne({}).then(function (dbMeals) {
+  app.get("/api/Meals/:Name", function (req, res) {
+    db.meals.findOne({
+      where: {
+        Name: req.params.Name
+      }
+    }).then(function (dbMeals) {
       res.json(dbMeals);
     });
   });
-// function postDrink() {
-
-
-var newMeals = {
+  app.post("/api/addMeal", function(req, res) {
+    db.meals.create(req.body).then(function(dbMeals) {
+      res.json(dbMeals);
+    });
+  });
+var newMeal = {
     names: [],
     categories: [],
-    areas: [],
+    area: [],
     instructions: [],
     ingredients: [],
     measurements: [],
     images: []
   }
-  // get the latest Meals
-  function latestMeals() {
-    axios.get("https://www.themealdb.com/api/json/v2/9973533/latest.php")
+  // get the latest meals
+  function allMeals() {
+    axios.get("https://www.themealdb.com/api/json/v2/9973533/search.php?s=")
      .then(response => {
-         for(i = 0; i < 1000; i ++) {
-            newMeals.names.push(response.data.meals[i].strMeal)
-            newMeals.categories.push(response.data.meals[i].strCategory)
-            newMeals.areas.push(response.data.meals[i].strArea)
-            newMeals.instructions.push(response.data.meals[i].strInstructions)
-            newMeals.images.push(response.data.meals[i].strMealThumb)
+         console.log(response.data.meals)
+         for(i = 0; i < 236; i ++) {
+            newMeal.names.push(response.data.meals[i].strMeal)
+            newMeal.categories.push(response.data.meals[i].strCategory)
+            newMeal.area.push(response.data.meals[i].strArea)
+            newMeal.instructions.push(response.data.meals[i].strInstructions)
+            newMeal.images.push(response.data.meals[i].strMealThumb).toString();
             function makeArray(obj){
                 var result = Object.keys(obj).map(function (key) { 
                     return [key, obj[key]]; 
@@ -49,35 +56,34 @@ var newMeals = {
               // console.log(newArray);
               for (y=0; y < newArray.length; y++){
                 if (newArray[y][0].includes("Ingredient")){
-                    newDrink.ingredients.push(newArray[y][1])
+                    newMeal.ingredients.push(newArray[y][1])
                 }
                 else if (newArray[y][0].includes("Measure")){
-                    newDrink.measurements.push(newArray[y][1])
+                    newMeal.measurements.push(newArray[y][1])
                 }
             }
-            var newIngred = newMeals.ingredients.toString()
-            var newMeasure = newMeals.measurements.toString()
-            console.log("post hit");
+            var newIngred = newMeal.ingredients.toString()
+            var newMeasure = newMeal.measurements.toString()
+            var newImage = newMeal.images.toString()
             db.meals.create({
-              Name: newMeals.names[0],
-              Category:  newMeals.categories[0],
-              Alcoholic:  newMeals.alcoholic[0],
-              Instructions:  newMeals.instructions[0],
+              Name: newMeal.names[0],
+              Category:  newMeal.categories[0],
+              Area:  newMeal.area[0],
+              Instructions:  newMeal.instructions[0],
               Ingredients:  newIngred,
               Measurements:  newMeasure,
-              Images:  newMeals.images[0]
+              Image:  newImage
             }).then(function () {
         });
-            // postDrink()
             clearMeals();
             function clearMeals(){
-                newMeals.names = [];
-                newMeals.categories = [];
-                newMeals.alcoholic = [];
-                newMeals.instructions = [];
-                newMeals.ingredients = [];
-                newMeals.measurements = [];
-                newMeals.images = [];
+                newMeal.names = [];
+                newMeal.categories = [];
+                newMeal.area = [];
+                newMeal.instructions = [];
+                newMeal.ingredients = [];
+                newMeal.measurements = [];
+                newMeal.images = []; 
               }
             } 
         })
@@ -85,7 +91,5 @@ var newMeals = {
      console.log(error);
      })
   }
-  latestMeals();
-
-
+  allMeals();
 };
