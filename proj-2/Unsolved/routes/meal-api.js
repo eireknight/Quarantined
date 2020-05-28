@@ -21,7 +21,6 @@ module.exports = function (app) {
       res.json(dbMeals);
     });
   });
-
 var newMeal = {
     names: [],
     categories: [],
@@ -84,7 +83,7 @@ var newMeal = {
                 newMeal.instructions = [];
                 newMeal.ingredients = [];
                 newMeal.measurements = [];
-                newMeal.images = [];
+                newMeal.images = []; 
               }
             } 
         })

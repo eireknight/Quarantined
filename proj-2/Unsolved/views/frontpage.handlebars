@@ -1,0 +1,216 @@
+{{>title}}
+{{#if isAuthenticated}}
+{{>navbarAuth}}
+{{else}}
+{{>navbar}}
+{{/if}}
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Fluid jumbotron</h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  </div>
+</div>
+
+<div id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h1>{{msg}}</h1>
+        <h2>Quarantined</h2>
+        <form class="clearfix mb-4" action="POST">
+          <div class="form-group">
+            <label for="text">Do you think you have the best meal?</label>
+            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+          </div>
+          <div class="form-group">
+            <label for="description">
+              <ul>
+                <li>With Quarantined, users can create an account that saves your favorite meals and posts them to our database for others to see!</li>
+                <li>Read, comment and vote on other peoples favorite meals!</li>
+                <li>The top voted meals will be posted on the front-page for all to see!</li>
+              </ul></label>
+            <textarea class="form-control" id="description" aria-describedby="description" placeholder="Enter Description"></textarea>
+          </div>
+          <button id="submit" class="btn btn-primary float-right">Submit</button>
+        </form>
+        <h3>Examples:</h3>
+        <ul id="example-list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 id="top-streams-header">Top Food options  <i id="twitch" class="fab fa-twitch"></i></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <a id="image-link1" target="_blank" href="">
+                            <img class="food-thumbnail" id="food-thumbnail1">
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a id="food-name-link1" target="_blank" href="">
+                            <h1>
+                                <span class="food-name" id="food-name1"></span>
+                            </h1>
+                        </a>
+                        <hr>
+                        <p>
+                            Description: <span class="food-title" id="food-title1"></span>
+                            <br>
+                            <span class="food-desc" id="food-desc1"></span>
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-8">
+                        <a id="image-link2" target="_blank" href="">
+                            <img class="food-thumbnail" id="food-thumbnail2">
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a id="food-name-link2" target="_blank" href="">
+                            <h1>
+                                <span class="food-name" id="food-name2"></span>
+                            </h1>
+                        </a>
+                        <hr>
+                        <p>
+                            Description: <span class="food-title" id="food-title2"></span>
+                            <br>
+                            <span class="food-desc" id="food-desc2"></span>
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-8">
+                        <a id="image-link3" target="_blank" href="">
+                            <img class="food-thumbnail" id="food-thumbnail3">
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a id="food-name-link3" target="_blank" href="">
+                            <h1>
+                                <span class="food-name" id="food-name3"></span>
+                            </h1>
+                        </a>
+                        <hr>
+                        <p>
+                            Description: <span class="food-title" id="food-title3"></span>
+                            <br>
+                            <span class="food-desc" id="food-desc3"></span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+    <div class="col-xs-12 col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 id="top-drinks-header">Top Drink options  <i id="twitch" class="fab fa-twitch"></i></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <a id="image-link1" target="_blank" href="">
+                            <img class="drink-thumbnail-1" id="drink-thumbnail1">
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a id="drink-name-link1" target="_blank" href="">
+                            <h1>
+                                <span class="drink-name" id="drink-name1"></span>
+                            </h1>
+                        </a>
+                        <hr>
+                        <p>
+                            Description: <span class="drink-title" id="drink-title1"></span>
+                            <br>
+                            <span class="drink-desc" id="drink-desc1"></span>
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-8">
+                        <a id="image-link2" target="_blank" href="">
+                            <img class="drink-thumbnail" id="drink-thumbnail2">
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a id="drink-name-link2" target="_blank" href="">
+                            <h1>
+                                <span class="drink-name" id="drink-name2"></span>
+                            </h1>
+                        </a>
+                        <hr>
+                        <p>
+                            Description: <span class="drink-title" id="drink-title2"></span>
+                            <br>
+                            <span class="drink-desc" id="drink-desc2"></span>
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-8">
+                        <a id="image-link3" target="_blank" href="">
+                            <img class="drink-thumbnail" id="drink-thumbnail3">
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a id="drink-name-link3" target="_blank" href="">
+                            <h1>
+                                <span class="drink-name" id="drink-name3"></span>
+                            </h1>
+                        </a>
+                        <hr>
+                        <p>
+                            Description: <span class="drink-title" id="drink-title3"></span>
+                            <br>
+                            <span class="drink-desc" id="drink-desc3"></span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    {{>footer}}
+    
+    <script src="/js/frontpage.js"></script>

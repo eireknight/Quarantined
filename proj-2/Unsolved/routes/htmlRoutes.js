@@ -9,9 +9,8 @@ module.exports = function(app) {
       });
     });
   });
-
   app.get("/home", function(req, res) {
-    db.Drinks.findAll({}).then(function(dbDrinks) {
+    db.drinks.findAll({}).then(function(dbDrinks) {
       res.render("index", {
         msg: "",
         drinks: dbDrinks
@@ -28,7 +27,7 @@ module.exports = function(app) {
   });
 
   app.get("/login", function(req, res) {
-    db.Drinks.findAll({}).then(function(dbDrinks) {
+    db.drinks.findAll({}).then(function(dbDrinks) {
       res.render("login", {
         msg: "",
         drinks: dbDrinks
@@ -37,7 +36,7 @@ module.exports = function(app) {
   });
 
   app.get("/profile", function(req, res) {
-    db.Drinks.findAll({}).then(function(dbDrinks) {
+    db.drinks.findAll({}).then(function(dbDrinks) {
       res.render("profile", {
         msg: "",
         drinks: dbDrinks
@@ -45,22 +44,13 @@ module.exports = function(app) {
     });
   });
   app.get("/submissions", function(req, res) {
-    db.Drinks.findAll({}).then(function(dbDrinks) {
+    db.drinks.findAll({}).then(function(dbDrinks) {
       res.render("submissions", {
         msg: "",
         drinks: dbDrinks
       });
     });
   });
-
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.render("example", {
-        example: dbExample
-
   app.get("/api/newDrink", function() {
     db.drinks.findAll({}).then(function() {});
   });
@@ -72,7 +62,6 @@ module.exports = function(app) {
         res.render("example", {
           example: dbExample
         });
-
       });
   });
   // Render 404 page for any unmatched routes
