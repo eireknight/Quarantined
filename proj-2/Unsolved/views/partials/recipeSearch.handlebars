@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="results"></div>
+        </div>
+    </div>
+</div>
+
+{{#if isAuthenticated}}
+<script src = "./js/userRequest.js"></script>
+
+{{/if}}
+{{#unless isAuthenticated}}
+<script src="./js/request.js"></script>
