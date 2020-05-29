@@ -1,5 +1,6 @@
 var db = require("../models");
 var axios = require("axios");
+var MealAPIKey = process.env.MEAL_API_KEY;
 
 module.exports = function (app) {
   app.get("/api/Meals", function (req, res) {
@@ -32,9 +33,8 @@ var newMeal = {
   }
   // get the latest meals
   function allMeals() {
-    axios.get("https://www.themealdb.com/api/json/v2/9973533/search.php?s=")
+    axios.get("https://www.themealdb.com/api/json/" + MealAPIKey + "/search.php?s=")
      .then(response => {
-         console.log(response.data.meals)
          for(i = 0; i < 236; i ++) {
             newMeal.names.push(response.data.meals[i].strMeal)
             newMeal.categories.push(response.data.meals[i].strCategory)

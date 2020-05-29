@@ -33,7 +33,7 @@ $(document).ready(function() {
   var $drinkIngredients = $("#drinkIngredients");
   var $drinkMeasurements = $("#drinkMeasurements");
   var $drinkImage = $("#drinkImage");
-  $("#submit").on("click", function(event) {
+  $("#submitDrink").on("click", function(event) {
     event.preventDefault();
     var addDrink = {
       Name: $drinkName.val().trim(),

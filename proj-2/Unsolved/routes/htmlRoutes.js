@@ -2,67 +2,38 @@ var db = require("../models");
 
 module.exports = function(app) {
   app.get("/", function(req, res) {
-    db.drinks.findAll({}).then(function(dbDrinks) {
-      res.render("index", {
-        msg: "",
-        drinks: dbDrinks
-      });
-    });
+    res.render("index", {});
   });
   app.get("/home", function(req, res) {
-    db.drinks.findAll({}).then(function(dbDrinks) {
-      res.render("index", {
-        msg: "",
-        drinks: dbDrinks
-      });
-    });
+    res.render("index", {});
   });
   app.get("/register", function(req, res) {
-    db.drinks.findAll({}).then(function(dbDrinks) {
-      res.render("signup", {
-        msg: "",
-        drinks: dbDrinks
-      });
-    });
+    res.render("signup", {});
   });
-
   app.get("/login", function(req, res) {
-    db.drinks.findAll({}).then(function(dbDrinks) {
-      res.render("login", {
-        msg: "",
-        drinks: dbDrinks
-      });
-    });
+    res.render("login", {});
   });
-
   app.get("/profile", function(req, res) {
-    db.drinks.findAll({}).then(function(dbDrinks) {
-      res.render("profile", {
-        msg: "",
-        drinks: dbDrinks
-      });
-    });
+    res.render("profile", {});
   });
   app.get("/submissions", function(req, res) {
+    res.render("submissions", {});
+  });
+  app.get("/newDrink", function(req, res) {
     db.drinks.findAll({}).then(function(dbDrinks) {
-      res.render("submissions", {
+      res.render("newDrink", {
         msg: "",
         drinks: dbDrinks
       });
     });
   });
-  app.get("/api/newDrink", function() {
-    db.drinks.findAll({}).then(function() {});
-  });
-  // Load example page and pass in an example by id
-  app.get("/api/drink/:Name", function(req, res) {
-    db.drinks
-      .findOne({ where: { Name: req.params.Name } })
-      .then(function(dbExample) {
-        res.render("example", {
-          example: dbExample
-        });
+  app.get("/newMeal", function(req, res) {
+    db.meals.findAll({}).then(function(dbMeals) {
+      res.render("newMeal", {
+        msg: "",
+        meals: dbMeals
       });
+    });
   });
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {

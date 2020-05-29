@@ -1,5 +1,6 @@
 var db = require("../models");
 var axios = require("axios");
+var DrinkAPIKey = process.env.DRINK_API_KEY;
 
 module.exports = function (app) {
   app.get("/api/drinks", function (req, res) {
@@ -35,7 +36,7 @@ var newDrink = {
   
   // get the latest drinks
   function allDrinks() {
-    axios.get("https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=")
+    axios.get("https://www.thecocktaildb.com/api/json/" + DrinkAPIKey + "/search.php?s=")
      .then(response => {
          for(i = 0; i < 595; i ++) {
             newDrink.names.push(response.data.drinks[i].strDrink)
