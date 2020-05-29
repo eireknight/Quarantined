@@ -1,9 +1,9 @@
-{{>title}}
+{{!-- {{>title}}
 {{#if isAuthenticated}}
 {{>navbarAuth}}
-{{else}}
+{{else}} --}}
 {{>navbar}}
-{{/if}}
+{{!-- {{/if}} --}}
 
 <div class="home-content">
     <div class="container">
@@ -27,7 +27,7 @@
 
 
 <div class="about-container section-container">
-    <div class="container text-center">
+    <div class="container">
         <div class="row">
             <div class="col about section-description wow fadeIn">
                 <h2>How it works</h2>
@@ -214,9 +214,11 @@
                                 </form>
                             </div>
                         </div>
-
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                    <h1 id="top-food-header">Top food options <i class="fas fa-pizza-slice"></i></h1>
+                    <div class="row" id="food-list">
                     </div>
-                </div>
             </div>
         </div>
 
@@ -338,17 +340,20 @@
                                 </form>
                             </div>
                         </div>
-
-                    </div>
+<br>
+<br>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 id="top-streams-header">Top drink options <i class="fas fa-glass-martini"></i></h1>
+                <div class="row" id="drink-list">
                 </div>
             </div>
         </div>
 
+    </div>
 
-        <br>
-        <br>
-        <br>
-
-
+    <br>
+    <br>
+    <br>
+<script src="/js/index.js"></script>
         {{>footer}}
-
