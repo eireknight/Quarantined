@@ -19,6 +19,9 @@ module.exports = function(app) {
   app.get("/submissions", function(req, res) {
     res.render("submissions", {});
   });
+  app.get("/forum", function(req, res) {
+    res.render("forum", {});
+  });
   app.get("/newDrink", function(req, res) {
     db.drinks.findAll({}).then(function(dbDrinks) {
       res.render("newDrink", {
