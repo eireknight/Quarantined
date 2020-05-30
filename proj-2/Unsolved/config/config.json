@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Kaydoe1414",
-    "database": "ingredientsDb",
+    "password": "PNOFreedom14!",
+    "database": "post",
     "host": "localhost",
     "dialect": "mysql"
   },
