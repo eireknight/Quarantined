@@ -19,29 +19,168 @@
                 <div class="card-content">
                     <h2 class="subtitle">Your Info</h2>
                     <div class="columns">
-                        <!-- pic column -->
-                        <div class="column is-narrow center-column">
-                            <figure class="image is-128x128">
-                                <img id="profile-image" src="https://bulma.io/images/placeholders/128x128.png">
-                            </figure>
+                        <div class="column">
+                            <form>
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control" id="nameControl"> Name: John Doe</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control" id="nameControl">Email: DoeJohn@hotmail.com</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control" id="nameControl">Gender: M</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div> {{!-- end of  column--}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- pic column -->
+        <div class="column is-narrow center-column">
+            <figure class="image is-128x128">
+                <img id="profile-image" src="https://bulma.io/images/placeholders/128x128.png">
+            </figure>
 
-                            <button class="button upload-button" data-upload-target-type="user">Update</button>
+            <button class="button upload-button" data-upload-target-type="user">Update</button>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="card profile-favorites">
+    <div class="card-content text-center">
+        <div class="content favorites">
+            <h2 class="subtitle" id="dogSubtitle">Your Favorites</h2>
+        </div>
+        <div class="content" id="favoritesContent">
+        </div>
+    </div>
+    <section class="food-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="section-top">
+
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food">
+                        <div class="food-img">
+                            <img src="/images/mexican egg.jpg" style="height: 230px; width: 300px" class="img-fluid"
+                                alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Mexican Eggrolls</h5>
+                                <span class="style-change">Starter</span>
+                            </div>
+                            <p class="pt-3">286 calories; 17.2 g total fat; 42 mg cholesterol; 571 mg sodium. 19 g
+                                carbohydrates; 12.5 g protein</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5 mt-sm-0">
+                        <div class="food-img">
+                            <img src="/images/chicken burg.jpg" style="height: 230px; width: 300px" class="img-fluid"
+                                alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Chicken Burger</h5>
+                                <span class="style-change">Chicken</span>
+                            </div>
+                            <p class="pt-3">566.5 calories; 47 g protein; 44.9 g carbohydrates; 145.4 mg cholesterol;
+                                1398 mg sodium. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5 mt-md-0">
+                        <div class="food-img">
+                            <img src="/images/vodka.jpg" style="height: 230px; width: 300px" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Johns Vodka Supreme</h5>
+                                <span class="style-change">Shot</span>
+                            </div>
+                            <p class="pt-3">
+                                Per Serving: 119 calories; 0 g fat; 4.4 g carbohydrates; 0.2 g protein; 0 mg
+                                cholesterol; 2 mg sodium.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5">
+                        <div class="food-img">
+                            <img src="/images/WS.jpg" style="height: 230px; width: 300px" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Easy Whiskey Sour</h5>
+                                <span class="style-change">Cocktail</span>
+                            </div>
+                            <p class="pt-3">
+                                Per Serving: 209 calories; 0 g fat; 27.7 g carbohydrates; 0.1 g protein; 0 mg
+                                cholesterol; 2 mg sodium.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5">
+                        <div class="food-img">
+                            <img src="/images/bean.jpg" style="height: 230px; width: 300px" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Bean Salad</h5>
+                                <span class="style-change">Vegetarian</span>
+                            </div>
+                            <p class="pt-3">
+                                Per Serving: 238 calories; 3.6 g fat; 42.7 g carbohydrates; 11.9 g protein; 0 mg
+                                cholesterol; 755 mg sodium.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5">
+                        <div class="food-img">
+                            <img src="/images/filet.jpeg" style="height: 230px; width: 300px" img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Filet Mignon</h5>
+                                <span class="style-change">Beef</span>
+                            </div>
+                            <p class="pt-3"> Per Serving: 590 calories; 43.4 g total fat; 125 mg cholesterol; 689 mg sodium. 13.4 g carbohydrates; 35.3 g protein. .</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="card profile-favorites">
-            <div class="card-content">
-                <div class="content favorites">
-                    <h2 class="subtitle" id="dogSubtitle">Your Favorites</h2>
-                </div>
-                <div class="content" id="favoritesContent">
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
 </div>
 
 
